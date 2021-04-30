@@ -3,7 +3,67 @@ require 'function.php';
     // cek apakah tombol submit sudah di tekan atau belum
     if( isset($_POST["submit"]) ) {
         
+        /* Melihat isi dari $_POST $_FILES (debug)
         
+        var_dump($_POST); 
+        var_dump($_FILES);
+        die;
+
+         Fungsi var_dump digunakan untuk mencetak output ke browser
+         Fungsi die adalah untuk mengakhiri eksekusi baris.
+        Sehingga baris yang di bawahnya tidak tereksekusi.
+
+
+
+            Isi dari $_POST:
+            Ada 5 array (nrp,nama,email,jurusan,submit)
+            array(5) {
+            ["nrp"]=>
+            string(4) "dsad"
+            ["nama"]=>
+            string(4) "weqe"
+            ["email"]=>
+            string(5) "sadas"
+            ["jurusan"]=>
+            string(4) "wqeq"
+            ["submit"]=>
+            string(0) ""
+            }
+
+            Isi dari $_FILES:
+            Ada 1 array (gambar)
+            array(1) {
+            ["gambar"]=>
+                //Ada 5 buah element array dari gambar
+
+                array(5) {
+                ["name"]=>
+                string(15) "beaconcream.png"
+                ["type"]=>
+                string(9) "image/png"
+                ["tmp_name"]=>
+                string(24) "C:\xampp\tmp\phpFC2B.tmp"
+                ["error"]=>
+                int(0)
+                ["size"]=>
+                int(28283)
+                }
+            }
+
+            keterangan dari $_FILES:
+                //  
+                error = 0 <- tidak ada error
+                error = 4 <- tidak ada file yang di upload
+                //
+
+                Angka size itu dari ukuran bite seperti contoh yang diatas
+                ["size"]=>
+                int(28283) = 2mb lebih
+
+
+
+        */
+
         
 
         // cek apakah berhasil ditambahkan atau tidak
@@ -37,7 +97,8 @@ require 'function.php';
 </head>
 <body>
     <h1>Tambah Data Mahasiswa</h1>
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
+    <!-- Agar form di isi dengan type file kita masukkan enctype -->
 
         <ul>
             <li>
@@ -58,7 +119,7 @@ require 'function.php';
             </li>
             <li>
                 <label for="gambar">Gambar :</label>
-                <input type="text" name="gambar" id="gambar" required>
+                <input type="file" name="gambar" id="gambar" required>
             </li>
             <li>
                 <button type="submit" name="submit">Tambah Data</button>
