@@ -260,7 +260,6 @@ function ubah($data){
     }
 
     
-    
     // query insert data
     $query  = "UPDATE mahasiswa SET
         nrp = '$nrp',
@@ -288,6 +287,10 @@ function cari($keyword){
     return query($query);
 }
 
+
+function registrasi(){
+    
+}
 
 ?>
 

@@ -10,8 +10,7 @@ $mhs = query("SELECT * FROM mahasiswa WHERE id = $id")[0];
     // cek apakah tombol submit sudah di tekan atau belum
     if( isset($_POST["submit"]) ) {
         
-        
-        
+    
 
         // cek apakah berhasil diubah atau tidak
         if(ubah($_POST) > 0){
@@ -22,6 +21,13 @@ $mhs = query("SELECT * FROM mahasiswa WHERE id = $id")[0];
                 </script>
             ";
 
+        }if ($_POST["submit"] == "") {
+            echo "
+            <script>
+                alert('Tidak ada data yang diubah!');
+                document.location.href = 'index.php';
+            </script>
+        ";
         }else{
             echo "
             <script>
