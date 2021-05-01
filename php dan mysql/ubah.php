@@ -1,9 +1,18 @@
 <?php
+session_start();
+if (!isset($_SESSION["login"])){
+  header("Location: login.php");
+  exit;
+}
 require 'function.php';
 
 
 // ambil data di URL
 $id = $_GET["id"];
+if ($id === NULL){
+    header("Location: index.php");
+    exit;
+  }
 
 // query data mahasiswa berdasarkan id
 $mhs = query("SELECT * FROM mahasiswa WHERE id = $id")[0];

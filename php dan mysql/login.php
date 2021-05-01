@@ -1,4 +1,9 @@
 <?php
+    session_start();
+    if (isset($_SESSION["login"])){
+        header("Location: index.php");
+        exit;
+      }
     require "function.php";
     if( isset($_POST["login"])){
         $username = $_POST["username"];
@@ -11,14 +16,14 @@
             // cek password
             $row = mysqli_fetch_assoc($result);
             if(password_verify($password, $row["password"])){
+                // set session
+                $_SESSION["login"] = true;
                 header("Location: index.php");
                 exit;
             }
         }
 
         $error = true;
-
-
 
     }
 ?>
@@ -32,6 +37,8 @@
     <title>Halaman Login</title>
 </head>
 <body>
+
+    
 
     <h1>Halaman Login</h1>
 
