@@ -1,6 +1,6 @@
 # Aplikasi Data Mahasiswa Sederhana
 
-    Aplikasi ini dibuat dengan PHP dan MYSQL. dan
+    Aplikasi ini dibuat dengan PHP dan MYSQL.
 aplikasi ini juga sudah dibuat sesimple mungkin serta banyak command line untuk mempermudah apa yang di maksud dalam setiap baris codingnya!.
 
 ## Getting Started
