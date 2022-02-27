@@ -35,7 +35,7 @@ End with an example of getting some data out of the system or using it for a lit
 
 
 
-<img src="https://github.com/YadBro/Aplikasi_Data_Mahasiswa/blob/master/img/test.PNG" style="border: 2px solid red;" width="150" height="80"/>
+<img src="https://github.com/YadBro/Aplikasi_Data_Mahasiswa/blob/master/img/test.PNG" style="border: 2px solid red;" width="260" height="120"/>
 
 
 ## Built With
