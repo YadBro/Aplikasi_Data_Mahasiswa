@@ -20,10 +20,10 @@ Bisa di clone atau di download, setelah itu lakukan hal ini:
 2. Nyalakan Apache dan Mysql pada XAMPP.
 ```
 ```
-3. Import Database yang ada pada Folder php dan mysql ke PHPMyAdmin.
+3. Import Database yang ada pada Directory database ke PHPMyAdmin.
 ```
 ```
-4. Jalankan file index.php yang pada Folder php dan mysql ke browser kalian.
+4. Jalankan file index.php yang pada Directory php ke browser kalian.
 ```
 ```
 5. Selesai.
